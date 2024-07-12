@@ -1,0 +1,14 @@
+<div class="container input-group mb-2">
+  <input class="form-control" id="serch-input" />
+  <button class="input-group-append btn btn-danger" id="serchBtn">검색</button>
+</div>
+
+<ul>
+  <% result.forEach((list)=>{ %>
+  <li>
+    <h2>할일:<%= list.todo %></h2>
+    <h2>기간:<%= list.due %></h2>
+    <button data-id="<%= list._id %>" class="delete">delete</button>
+  </li>
+  <% }) %>
+</ul>
